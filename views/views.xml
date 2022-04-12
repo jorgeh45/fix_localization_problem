@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="fix_loyalty.list">
+      <field name="name">fix_loyalty list</field>
+      <field name="model">fix_loyalty.fix_loyalty</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="fix_loyalty.action_window">
+      <field name="name">fix_loyalty window</field>
+      <field name="res_model">fix_loyalty.fix_loyalty</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="fix_loyalty.action_server">
+      <field name="name">fix_loyalty server</field>
+      <field name="model_id" ref="model_fix_loyalty_fix_loyalty"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="fix_loyalty" id="fix_loyalty.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="fix_loyalty.menu_1" parent="fix_loyalty.menu_root"/>
+    <menuitem name="Menu 2" id="fix_loyalty.menu_2" parent="fix_loyalty.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="fix_loyalty.menu_1_list" parent="fix_loyalty.menu_1"
+              action="fix_loyalty.action_window"/>
+    <menuitem name="Server to list" id="fix_loyalty" parent="fix_loyalty.menu_2"
+              action="fix_loyalty.action_server"/>
+-->
+  </data>
+</odoo>
